@@ -59,6 +59,8 @@ public class PullToRefreshGridView extends PullToRefreshAdapterViewBase<GridView
 
 		// Use Generated ID (from res/values/ids.xml)
 		gv.setId(R.id.gridview);
+		int gridPadding = (int)(15 * getResources().getDisplayMetrics().density);
+		gv.setPadding(gridPadding, gridPadding, gridPadding, gridPadding);
 		return gv;
 	}
 
