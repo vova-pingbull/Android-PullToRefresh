@@ -750,7 +750,8 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 						break;
 					default:
 					case PULL_FROM_START:
-                        			int headerSize = getHeaderSize() < 1 ? 91 : getHeaderSize();
+			                        Float density = getResources().getDisplayMetrics().density;
+                        			int headerSize = getHeaderSize() < 1 ? (int)(45f * density) : getHeaderSize();
 						smoothScrollTo(-headerSize, listener);
 						break;
 				}
